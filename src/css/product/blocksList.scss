@@ -1,0 +1,284 @@
+@import "../common/public";
+@import "../common/subgroup";
+.blocks-list{
+  background-color: #ebebeb;
+  .blocks{
+    width: 1200px;
+    margin: 0 auto;
+    .classifications,.ages{
+      margin-top: -50px;
+    }
+    .block{
+      //标题公共样式
+      .title{
+        height: 146px;
+        @include englishChinese;
+        .chinese{
+          color: #646464;
+        }
+        .english{
+          color: #313131;
+          opacity: 0.1;
+        }
+        .theme-change-page{
+          //display: block;
+          position: relative;
+          left: 1084px;
+          bottom: 28px;
+          width: 96px;
+          height: 32px;
+          //line-height: 30px;
+          text-align: center;
+          border-radius: 16px;
+          background-color: #FFFFFF;
+          display: flex;
+          .last,.next{
+            flex: 1;
+            height: 32px;
+            line-height: 32px;
+            cursor: pointer;
+            display: block;
+            img{
+              margin-top: -3px;
+              vertical-align: middle;
+              width: 16px;
+              height: 16px;
+            }
+          }
+          span{
+            vertical-align: middle;
+            height: 32px;
+            font-size: 32px;
+            font-weight: 100;
+            opacity: 0.1;
+          }
+        }
+      }
+      //主题，类别部分样式
+      .theme-page,.classifications-page{
+        width: 1300px;
+        margin: 0 auto;
+        padding: 25px 0;
+        display: flex;
+        .theme-it,.classifications-item{
+          flex: 285px;
+          width: 285px;
+          overflow: hidden;
+          margin-right: 20px;
+          flex-grow: 0;
+          background-color: #FFFFFF;
+          @include productionCardShadow;
+          @include productionCardHoverShadow;
+          &:last-child{
+            margin-right: 0;
+          }
+          &:first-child{
+            margin-left: 50px;
+          }
+
+          .theme-dec,.classifications-dec{
+            background-color: #FFFFFF;
+            .theme-title,.classifications-title{
+              
+              font-size: 20px;
+              color: #313131;
+              @include textOverflowOne;
+            }
+            .theme-dec-main,.classifications-dec-main{
+              
+              font-size: 14px;
+              color: #959595;
+              height: 20px;
+              line-height: 20px;
+              @include textOverflowOne;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+      //主题部分
+      .theme-page{
+        .theme-it{
+          height: 380px;
+          .img{
+            width: 285px;
+            height: 285px;
+          }
+          .theme-dec{
+            height: 95px;
+            padding: 20px 20px 0;
+            .theme-title{
+              height: 28px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+      //类别部分样式
+      .classifications-page{
+        .classifications-item{
+          height: 214px;
+          .img{
+            width: 285px;
+            height: 160px;
+          }
+          .classifications-dec{
+            padding: 0 20px 0;
+            position: relative;
+            transition: all 0.4s;
+
+            z-index: 2;
+            .classifications-title{
+              height: 54px;
+              line-height: 54px;
+              @include textOverflowOne;
+            }
+            .classifications-dec-main{
+              transition: all 0.8s;
+              visibility: hidden;
+              opacity: 0;
+            }
+          }
+          &:hover{
+            .classifications-dec{
+              height: 93px;
+              margin-top: -39px;
+              .classifications-dec-main{
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      //年龄
+      .ages-area{
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        .ages-item{
+          flex: 285px;
+          width: 285px;
+          height: 214px;
+          overflow: hidden;
+          margin-right: 20px;
+          flex-grow: 0;
+          background-color: #FFFFFF;
+          @include productionCardShadow;
+          @include productionCardHoverShadow;
+          &:last-child{
+            margin-right: 0;
+          }
+          .img{
+            width: 285px;
+            height: 160px;
+          }
+          .ages-dec{
+            padding: 0 20px 0;
+            position: relative;
+            transition: all 0.4s;
+            background-color: #FFFFFF;
+            z-index: 2;
+            .ages-title{
+              height: 54px;
+              line-height: 54px;
+              
+              font-size: 20px;
+              color: #313131;
+              @include textOverflowOne;
+            }
+            .ages-dec-main{
+              transition: all 0.8s;
+              visibility: hidden;
+              opacity: 0;
+              
+              font-size: 14px;
+              color: #959595;
+              height: 20px;
+              line-height: 20px;
+              @include textOverflowOne;
+              margin-top: 5px;
+            }
+          }
+          &:hover{
+            .ages-dec{
+              height: 93px;
+              margin-top: -39px;
+              .ages-dec-main{
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+          }
+        }
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
+//轮播图公共样式
+.swipe-area{
+  //为了边框阴影不被遮盖。所以增加div宽度
+  width: 1300px;
+  box-sizing: border-box;
+  position: relative;
+  left: -50px;
+  top: -25px;
+  .slide {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  .slide figure {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.5s;
+    white-space: nowrap;
+    box-shadow: none;
+    background-color: #ebebeb;
+    margin: 0 auto;
+  }
+  //切换按钮
+  .controller{
+    position: absolute;
+    left: 1134px;
+    top: -45px;
+    width: 96px;
+    height: 32px;
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 16px;
+    display: flex;
+    .img-prev, .img-next {
+      flex: 1;
+      height: 32px;
+      line-height: 32px;
+      cursor: pointer;
+      display: block;
+      width: 46px;
+    }
+    .img-prev{
+      background: url("../../static/img/icon_16_arrow_left_g@2x.png") no-repeat 50% 50%;
+      background-size: 16px 16px;
+      &.true{
+        background: url("../../static/img/icon_16_arrow_left_p@2x.png") no-repeat 50% 50%;
+        background-size: 16px 16px;
+      }
+    }
+    .img-next{
+      background: url("../../static/img/icon_16_arrow_right_g@2x.png") no-repeat 50% 50%;
+      background-size: 16px 16px;
+      &.true{
+        background: url("../../static/img/icon_16_arrow_right_p@2x.png") no-repeat 50% 50%;
+        background-size: 16px 16px;
+      }
+    }
+    span{
+      vertical-align: middle;
+      height: 32px;
+      font-size: 32px;
+      font-weight: 100;
+      opacity: 0.1;
+    }
+  }
+}

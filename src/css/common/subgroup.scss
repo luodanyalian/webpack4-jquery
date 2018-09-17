@@ -1,0 +1,907 @@
+//背景色，红色
+.red-bkg {
+  min-width: 1200px;
+  max-width: 2560px;
+  width: 100%;
+  height: 420px;
+  position: absolute;
+  //颜色的渐变
+  background: -webkit-linear-gradient(left, #ED5564, #FF9575);
+  background: -o-linear-gradient(left, #ED5564, #FF9575);
+  background: -moz-linear-gradient(left, #ED5564, #FF9575);
+  background: -ms-linear-gradient(left, #ED5564, #FF9575);
+  background: -webkit-gradient(linear, 0% 25%, 75% 100%, from(#ED5564), to(#FF9575));
+}
+
+//背景色，红色
+.blue-bkg {
+  min-width: 1200px;
+  max-width: 2560px;
+  width: 100%;
+  height: 420px;
+  position: absolute;
+  //颜色的渐变
+  background-image: linear-gradient(90deg, #67E6C6 13%, #63B4F1 87%);
+  //background: -webkit-linear-gradient(left, #ED5564, #FF9575);
+  //background: -o-linear-gradient(left, #ED5564, #FF9575);
+  //background: -moz-linear-gradient(left, #ED5564, #FF9575);
+  //background: -ms-linear-gradient(left, #ED5564, #FF9575);
+  //background: -webkit-gradient(linear, 0% 25%, 75% 100%, from(#ED5564), to(#FF9575));
+}
+
+//左右下布局模块
+.type-one {
+  width: 1200px;
+  margin: 0 auto;
+  .title {
+    height: 146px;
+    color: #FFFFFF;
+    @include englishChinese;
+  }
+  .type-one-main {
+    display: flex;
+    .one {
+      flex: 480px;
+      height: 640px;
+      background: #FFFFFF;
+      @include productionCardShadow;
+      overflow: hidden;
+      position: relative;
+      .img {
+        width: 480px;
+        height: 640px;
+        //卡片大小渐变
+        @include cardGradual;
+      }
+      .one-des {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        width: 420px;
+        z-index: 2;
+        .type {
+          font-size: 20px;
+          color: #313131;
+          margin-bottom: 10px;
+          @include textOverflowOne; //单行文本超出显示省略号
+        }
+        .name {
+          font-size: 32px;
+          color: #313131;
+          margin-bottom: 10px;
+          @include textOverflowOne; //单行文本超出显示省略号
+        }
+        .dec {
+          font-size: 20px;
+          color: #959595;
+          @include textOverflowOne; //单行文本超出显示省略号
+        }
+      }
+    }
+    .mid {
+      flex: 20px;
+    }
+    .two {
+      flex: 700px;
+      .two-top {
+        height: 364px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        .img {
+          width: 700px;
+          height: 364px;
+          //卡片大小渐变
+          @include cardGradual;
+        }
+        .two-top-des {
+          position: absolute;
+          left: 30px;
+          bottom: 30px;
+          width: 420px;
+          z-index: 2;
+          .type {
+            font-size: 20px;
+            color: #313131;
+            margin-bottom: 10px;
+            @include textOverflowOne; //单行文本超出显示省略号
+          }
+          .name {
+            font-size: 32px;
+            color: #313131;
+            margin-bottom: 10px;
+            @include textOverflowOne; //单行文本超出显示省略号
+          }
+          .dec {
+            font-size: 20px;
+            color: #959595;
+            @include textOverflowOne; //单行文本超出显示省略号
+          }
+        }
+      }
+      .two-bom {
+        margin-top: 20px;
+        display: flex;
+        .three, .four {
+          flex: 340px;
+          height: 256px;
+          background: #FFFFFF;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+          border-radius: 8px;
+          overflow: hidden;
+          position: relative;
+          .img {
+            width: 340px;
+            height: 256px;
+            //卡片大小渐变
+            @include cardGradual;
+          }
+          .three-des, .four-des {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            width: 280px;
+            z-index: 2;
+            .type {
+              font-size: 16px;
+              color: #313131;
+              margin-bottom: 10px;
+              @include textOverflowOne; //单行文本超出显示省略号
+            }
+            .name {
+              font-size: 24px;
+              color: #313131;
+              margin-bottom: 10px;
+              @include textOverflowOne; //单行文本超出显示省略号
+            }
+            .dec {
+              font-size: 16px;
+              color: #959595;
+              @include textOverflowOne; //单行文本超出显示省略号
+            }
+          }
+        }
+        .mid {
+          flex: 20px;
+        }
+      }
+    }
+  }
+}
+
+//四列布局，悬浮加阴影，右侧为查看更多
+.type-two {
+  width: 1200px;
+  margin: 0 auto;
+  .title {
+    height: 146px;
+    @include englishChinese;
+    .chinese {
+      color: #646464;
+    }
+    .english {
+      opacity: 0.1;
+      color: #313131;
+    }
+    .see-more {
+      display: block;
+      position: relative;
+      left: 1084px;
+      bottom: 28px;
+      width: 96px;
+      height: 32px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 16px;
+      background-color: #FFFFFF;
+      //top: -10px;
+      .more-text {
+        font-size: 14px;
+        color: #8B49F6;
+        margin-left: 4px;
+      }
+      .right-more {
+        width: 20px;
+        height: 20px;
+        margin-left: -6px;
+      }
+      .more-text, .right-more {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .type-two-main {
+    display: flex;
+    width: 1200px;
+    flex-wrap: wrap;
+    //height: 380px;
+    .two-item {
+      width: 25%;
+      width: 285px;
+      //flex: 285px;
+      flex-shrink: 0;
+      margin-right: 20px;
+      background-color: #ffffff;
+      overflow: hidden;
+      margin-bottom: 30px;
+      //&:last-child{
+      //  margin-right: 0;
+      //}
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+      @include productionCardShadow;
+      @include productionCardHoverShadow;
+      position: relative;
+      .img {
+        width: 285px;
+        height: 285px;
+      }
+      .two-item-dec {
+        width: 245px;
+        height: 70px;
+        margin-top: 20px;
+        margin-left: 20px;
+        .dec-title {
+          font-size: 20px;
+          color: #313131;
+          @include textOverflowOne;
+        }
+        .dec-main {
+          font-size: 14px;
+          color: #959595;
+          margin-top: 5px;
+          @include textOverflowOne;
+        }
+      }
+    }
+  }
+}
+
+//四列布局，悬浮加阴影,加显示描述，右侧为查看更多
+.type-three {
+  width: 1200px;
+  margin: 0 auto;
+  .title {
+    height: 146px;
+    @include englishChinese;
+    .chinese {
+      color: #646464;
+    }
+    .english {
+      opacity: 0.1;
+      color: #313131;
+    }
+    .see-more {
+      display: block;
+      position: relative;
+      left: 1084px;
+      bottom: 28px;
+      width: 96px;
+      height: 32px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 16px;
+      background-color: #FFFFFF;
+      //top: -10px;
+      .more-text {
+        font-size: 14px;
+        color: #8B49F6;
+        margin-left: 4px;
+      }
+      .right-more {
+        width: 20px;
+        height: 20px;
+        margin-left: -6px;
+      }
+      .more-text, .right-more {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .type-three-main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    //height: 380px;
+    .three-item {
+      //flex: 285px;
+      width: 25%;
+      flex-shrink: 0;
+      width: 285px;
+      margin-right: 20px;
+      background-color: #ffffff;
+      overflow: hidden;
+      margin-bottom: 30px;
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+      @include productionCardShadow;
+      @include productionCardHoverShadow;
+      position: relative;
+      .img {
+        width: 285px;
+        height: 285px;
+      }
+      .three-item-dec {
+        height: 95px;
+        padding: 20px 20px 0;
+        position: relative;
+        background-color: #ffffff;
+        z-index: 2;
+        .dec-type {
+          font-size: 14px;
+          color: #313131;
+          @include textOverflowOne; //单行文本超出显示省略号
+          margin-bottom: 5px;
+          height: 20px;
+          line-height: 20px;
+        }
+        .dec-title {
+          font-size: 20px;
+          color: #313131;
+          @include textOverflowOne; //单行文本超出显示省略号
+          height: 28px;
+          line-height: 28px;
+        }
+        .dec-main {
+          transition: all 0.8s;
+          visibility: hidden;
+          opacity: 0;
+          font-size: 14px;
+          color: #959595;
+          height: 20px;
+          line-height: 20px;
+          margin-top: 5px;
+          @include textOverflowOne; //单行文本超出显示省略号
+        }
+        transition: all 0.4s;
+      }
+      &:hover {
+        .three-item-dec {
+          height: 118px;
+          margin-top: -23px;
+          .dec-main {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+//音频视频部分
+.type-four{
+  width: 895px;
+  margin: 0 auto;
+  .title{
+    height: 146px;
+    @include englishChinese;
+    .chinese{
+      color: #646464;
+    }
+    .english{
+      color: #313131;
+      opacity: 0.1;
+    }
+  }
+  .swipe-area{
+    //为了边框阴影不被遮盖。所以增加div宽度
+    width: 925px;
+    box-sizing: border-box;
+    position: relative;
+    left: -10px;
+    top: -25px;
+    .slide {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      figure {
+        display: inline-block;
+        position: relative;
+        transition: transform 0.5s;
+        white-space: nowrap;
+        box-shadow: none;
+        background-color: #ebebeb;
+        margin: 10px auto 0;
+      }
+    }
+    //切换按钮
+    .controller{
+      position: absolute;
+      left: 794px;
+      top: -45px;
+      width: 96px;
+      height: 32px;
+      background-color: #FFFFFF;
+      text-align: center;
+      border-radius: 16px;
+      display: flex;
+      .img-prev, .img-next {
+        flex: 1;
+        height: 32px;
+        line-height: 32px;
+        cursor: pointer;
+        display: block;
+        width: 46px;
+      }
+      .img-prev{
+        background: url("../../static/img/icon_16_arrow_left_g@2x.png") no-repeat 50% 50%;
+        background-size: 16px 16px;
+        &.true{
+          background: url("../../static/img/icon_16_arrow_left_p@2x.png") no-repeat 50% 50%;
+          background-size: 16px 16px;
+        }
+      }
+      .img-next{
+        background: url("../../static/img/icon_16_arrow_right_g@2x.png") no-repeat 50% 50%;
+        background-size: 16px 16px;
+        &.true{
+          background: url("../../static/img/icon_16_arrow_right_p@2x.png") no-repeat 50% 50%;
+          background-size: 16px 16px;
+        }
+      }
+      span{
+        vertical-align: middle;
+        height: 32px;
+        font-size: 32px;
+        font-weight: 100;
+        opacity: 0.1;
+      }
+    }
+  }
+  .four-page{
+    width: 925px;
+    margin: 0 auto;
+    padding: 15px 0 25px;
+    display: flex;
+    .four-item{
+      flex: 285px;
+      width: 214px;
+      overflow: hidden;
+      margin-right: 20px;
+      flex-grow: 0;
+      background-color: #FFFFFF;
+      @include productionCardShadow;
+      @include productionCardHoverShadow;
+      &:last-child{
+        margin-right: 0;
+      }
+      &:first-child{
+        margin-left: 15px;
+      }
+      .img{
+        width: 285px;
+        height: 160px;
+      }
+      .four-dec{
+        height: 54px;
+        padding: 0 20px;
+        position: relative;
+        background-color: #ffffff;
+        z-index: 2;
+        .radio-icon{
+          position: absolute;
+          //top: -10px;
+          width: 100%;
+          .icon-play {
+            transition: all 0.4s;
+            width: 36px;
+            height: 24px;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            border-radius: 12px;
+            background: rgba(49, 49, 49, 0.50) url("../../static/img/icon_16_arrow_right_w@2x.png") no-repeat center;
+            background-size: 16px 18px;
+          }
+          .time-length {
+            position: absolute;
+            right: 40px;
+            bottom: 10px;
+            width: 57px;
+            height: 24px;
+            background: rgba(49,49,49,0.50);
+            border-radius: 12px;
+            font-size: 14px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 24px;
+          }
+        }
+        .four-title{
+          font-size: 20px;
+          color: #313131;
+          height: 54px;
+          line-height: 54px;
+          @include textOverflowOne;
+        }
+        .four-dec-main{
+          font-size: 14px;
+          color: #959595;
+          height: 20px;
+          line-height: 20px;
+          @include textOverflowOne;
+          margin-top: -5px;
+          transition: all 0.8s;
+          visibility: hidden;
+          opacity: 0;
+        }
+        transition: all 0.4s;
+      }
+      &:hover {
+        .four-dec {
+          height: 83px;
+          margin-top: -29px;
+          .radio-icon{
+            .icon-play{
+              background: #FFFFFF url("../../static/img/icon_16_arrow_right_p@2x.png") no-repeat center;
+              background-size: 16px 18px;
+            }
+          }
+          .four-dec-main {
+            visibility: visible;
+            opacity: 1;
+
+          }
+        }
+      }
+    }
+  }
+}
+//三列轮播的
+.type-five{
+  width: 895px;
+  margin: 0 auto;
+  .title{
+    height: 146px;
+    @include englishChinese;
+    .chinese{
+      color: #646464;
+    }
+    .english{
+      color: #313131;
+      opacity: 0.1;
+    }
+  }
+  .swipe-area{
+    //为了边框阴影不被遮盖。所以增加div宽度
+    width: 925px;
+    box-sizing: border-box;
+    position: relative;
+    left: -10px;
+    top: -25px;
+    .slide {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      figure {
+        display: inline-block;
+        position: relative;
+        transition: transform 0.5s;
+        white-space: nowrap;
+        box-shadow: none;
+        background-color: #ebebeb;
+        margin: 10px auto 0;
+      }
+    }
+    //切换按钮
+    .controller{
+      position: absolute;
+      left: 794px;
+      top: -45px;
+      width: 96px;
+      height: 32px;
+      background-color: #FFFFFF;
+      text-align: center;
+      border-radius: 16px;
+      display: flex;
+      .img-prev, .img-next {
+        flex: 1;
+        height: 32px;
+        line-height: 32px;
+        cursor: pointer;
+        display: block;
+        width: 46px;
+      }
+      .img-prev{
+        background: url("../../static/img/icon_16_arrow_left_g@2x.png") no-repeat 50% 50%;
+        background-size: 16px 16px;
+        &.true{
+          background: url("../../static/img/icon_16_arrow_left_p@2x.png") no-repeat 50% 50%;
+          background-size: 16px 16px;
+        }
+      }
+      .img-next{
+        background: url("../../static/img/icon_16_arrow_right_g@2x.png") no-repeat 50% 50%;
+        background-size: 16px 16px;
+        &.true{
+          background: url("../../static/img/icon_16_arrow_right_p@2x.png") no-repeat 50% 50%;
+          background-size: 16px 16px;
+        }
+      }
+      span{
+        vertical-align: middle;
+        height: 32px;
+        font-size: 32px;
+        font-weight: 100;
+        opacity: 0.1;
+      }
+    }
+  }
+  .five-page{
+    width: 925px;
+    margin: 0 auto;
+    padding: 15px 0 25px;
+    display: flex;
+    .five-item{
+      flex: 285px;
+      width: 214px;
+      overflow: hidden;
+      margin-right: 20px;
+      flex-grow: 0;
+      background-color: #FFFFFF;
+      @include productionCardShadow;
+      @include productionCardHoverShadow;
+      &:last-child{
+        margin-right: 0;
+      }
+      &:first-child{
+        margin-left: 15px;
+      }
+      .img{
+        width: 285px;
+        height: 285px;
+      }
+      .five-dec{
+        height: 95px;
+        padding: 20px 20px 0;
+        position: relative;
+        background-color: #ffffff;
+        z-index: 2;
+        .five-title{
+          font-size: 14px;
+          color: #313131;
+          @include textOverflowOne; //单行文本超出显示省略号
+          margin-bottom: 5px;
+          height: 20px;
+          line-height: 20px;
+        }
+        .dec-title{
+          font-size: 20px;
+          color: #313131;
+          @include textOverflowOne; //单行文本超出显示省略号
+          height: 28px;
+          line-height: 28px;
+        }
+        .five-dec-main{
+          transition: all 0.8s;
+          visibility: hidden;
+          opacity: 0;
+          font-size: 14px;
+          color: #959595;
+          height: 20px;
+          line-height: 20px;
+          margin-top: 5px;
+          @include textOverflowOne; //单行文本超出显示省略号
+        }
+        transition: all 0.4s;
+      }
+      &:hover {
+        .five-dec {
+          height: 118px;
+          margin-top: -23px;
+          .five-dec-main {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//面包屑公共样式
+.crumbs-area {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  .crumbs {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #646464;
+    height: 60px;
+    line-height: 60px;
+    a{
+      color: #646464;
+    }
+  }
+}
+
+//右侧导航条公共样式
+.right-nav {
+  position: fixed;
+  top: 206px;
+  left: calc(50vw + 620px);
+  width: 64px;
+  z-index: 1000;
+  .channel {
+    height: 240px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    .one {
+      height: 67.6px;
+      background-image: linear-gradient(-180deg, #FFFFFF 76%, #EBEBEB 100%);
+      p {
+        height: 17px;
+        line-height: 17px;
+        padding-top: 15px;
+
+        font-size: 12px;
+        color: #959595;
+        text-align: center;
+      }
+      img {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 35px;
+        opacity: 0.1;
+        //z-index: -1;
+      }
+      .ii {
+        width: 8px;
+        height: 5px;
+        background-color: #646464;
+        position: relative;
+        top: 50px;
+        opacity: 0.2;
+        left: 28px;
+        border-radius: 0 0 4px 4px;
+      }
+
+    }
+    .putao,.tmall,.jd{
+      .store-icon {
+        width: 32px;
+        height: 32px;
+        margin-top: 18.2px;
+        &.one{
+          display: inline-block;
+        }
+        &.two{
+          display: none;
+        }
+      }
+      &:hover{
+        .one{
+          display: none;
+        }
+        .two{
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .points {
+    display: block;
+    height: 64px;
+    margin-top: 10px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+    text-align: center;
+    //转换动画
+    //transition: all 0.4s;
+    cursor: pointer;
+    .point-icon {
+      margin-top: 8px;
+      width: 26px;
+      height: 26px;
+    }
+    .text {
+
+      font-size: 12px;
+      color: #8B49F6;
+      text-align: center;
+      height: 17px;
+      line-height: 17px;
+      margin-top: 3px;
+    }
+    .hover-show {
+      width: 200px;
+      height: 292px;
+      border-radius: 8px;
+      background-color: #FFFFFF;
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.20);
+      border-radius: 8px;
+      position: fixed;
+      display: block;
+      top: 456px;
+      left: calc(50vw + 410px);
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s;
+      .icon {
+        position: absolute;
+        left: 200px;
+        top: 26px;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid #FFFFFF;
+      }
+      .qc-icon {
+        width: 160px;
+        height: 160px;
+        margin-top: 20px;
+      }
+      p {
+
+        font-size: 14px;
+        color: #646464;
+        text-align: center;
+        padding: 5px 23px 0;
+        line-height: 20px;
+      }
+      .link {
+        display: block;
+        margin: 10px auto 0;
+        width: 96px;
+        height: 32px;
+        line-height: 32px;
+        background: #8B49F6;
+        border-radius: 16px;
+
+        font-size: 14px;
+        color: #FFFFFF;
+        text-align: center;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+      }
+    }
+    &:hover {
+      .hover-show {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  .back-top {
+    height: 64px;
+    margin-top: 10px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+    .backTop-icon {
+      margin-top: 8px;
+      width: 26px;
+      height: 26px;
+    }
+    .text {
+
+      font-size: 12px;
+      color: #959595;
+      height: 17px;
+      line-height: 17px;
+      margin-top: 3px;
+    }
+  }
+}
+
+

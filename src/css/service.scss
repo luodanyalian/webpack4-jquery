@@ -1,0 +1,262 @@
+@import "common.scss";
+
+.s-container {
+    min-width: 1200px;
+    max-width: 2560px;
+    width: 100%;
+    min-height: 100%;
+    background-color: #eeeeee;
+}
+
+
+/*头部蓝色渐变背景*/
+
+.s-title-bg {
+    width: 100%;
+    min-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: linear-gradient(90deg, #63B4F1 13%, #67E6C6 87%);
+    background-size: 100% 420px;
+}
+
+// 标题黑色
+.fontcolor1 {
+    .english {color: #313131;
+    opacity: 0.1;}
+    .chinese {color: #646464;}
+}
+
+// 标题白色
+.fontcolor1-w {
+    .english {color: #313131;
+    opacity: 0.1;}
+    .chinese {color: #FFFFFF;}
+}
+
+.s-img-1 {
+    background: url(../static/img/img_128_service_01.png) no-repeat center;
+}
+
+.s-img-2 {
+    background: url(../static/img/img_128_service_02.png) no-repeat center;
+}
+
+.s-img-3 {
+    background: url(../static/img/img_128_service_03.png) no-repeat center;
+}
+
+.s-img {
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: 136px;
+    margin-right: 136px
+}
+
+.s-ul {
+    background: #fff;
+    overflow: hidden;
+    margin-top: 22px;
+    border-radius: 10px;
+    .s-li {
+        float: left;
+        width: 400px;
+        height: 369px;
+        text-align: center;
+        border-top: solid 1px #f5f5f5;
+        border-right: solid 1px #f5f5f5;
+        border-bottom: solid 1px #f5f5f5;
+        overflow: hidden;
+    }
+}
+
+.s-dt {
+    font-size: 32px;
+    color: #313131;
+    text-align: center;
+    display: block;
+}
+
+.s-dd {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #959595;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+// 电话服务卡片
+.s-card-call {
+    width: 590px;
+    height: 313px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+}
+
+
+// .s-card-call:hover {
+//     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+// }
+
+// 官方微信
+.s-card-wx {
+    width: 590px;
+    height: 313px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+    margin-left: 20px;
+    .s-wx-img {
+        width: 192px;
+        height: 192px;
+        float: right;
+        margin-top: -91px;
+        margin-right: 21px;
+    }
+}
+
+
+// .s-card-wx:hover {
+//     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+// }
+
+// 电话服务 卡片头部
+.s-card-call-top {
+    width: 590px;
+    height: 174px;
+    padding: 2px 16px;
+    background-image: linear-gradient(45deg, #ED5564 0%, #FF9575 100%);
+    border-radius: 8px 8px 0 0;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 30px;
+    .s-t-title {
+        font-size: 32px;
+        margin-bottom: 10px
+    }
+    .s-t-p {
+        font-size: 20px;
+    }
+}
+
+// 电话服务 卡片底部
+.s-card-call-bottom {
+    margin: 30px;
+    text-align: right;
+    .s-cl-b-title {
+        font-size: 40px;
+        color: #313131;
+        letter-spacing: 0;
+    }
+    .s-cl-b-p {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #959595;
+    }
+}
+
+// 联系客服
+.s-service {
+    display: inline-flex;
+}
+
+// 微信服务
+.s-card-wx-top {
+    width: 590px;
+    height: 174px;
+    padding: 2px 16px;
+    background-image: linear-gradient(-90deg, #A9E65E 2%, #5FD469 100%);
+    border-radius: 8px 8px 0 0;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 30px;
+    .s-wx-t-title {
+        font-size: 32px;
+        margin-bottom: 10px
+    }
+    .s-wx-t-p {
+        font-size: 20px;
+    }
+}
+
+// 常见问题列表
+.s-question-list {
+    overflow: hidden;
+    text-align: center;
+
+    .s-question-ul {
+        background: #fff;
+        overflow: hidden;
+        margin-top: 22px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        .s-question-li {
+            float: left;
+            width: 240px;
+            height: 286px;
+            text-align: center;
+            // border-top: solid 1px #f5f5f5;
+            border-right: solid 1px #f5f5f5;
+            border-bottom: solid 1px #f5f5f5;
+            overflow: hidden;
+        }
+        .s-q-item-img {
+            display: block;
+            width: 196px;
+            height: 160px;
+            margin-top: 20px;
+            margin-left: 22px;
+            margin-right: 22px;
+        }
+        .s-q-item-img-01 {
+                background: url(../static/app_icon/img_app_02.jpg) no-repeat center;
+            }
+            .s-q-item-img-02 {
+                background: url(../static/app_icon/img_app_01.jpg) no-repeat center;
+            }
+            .s-q-item-img-03 {
+                background: url(../static/app_icon/img_app_03.jpg) no-repeat center;
+            }
+            .s-q-item-img-04 {
+                background: url(../static/app_icon/img_app_04.jpg) no-repeat center;
+            }
+            .s-q-item-img-05 {
+                background: url(../static/app_icon/img_app_05.jpg) no-repeat center;
+            }
+            .s-q-item-img-06 {
+                background: url(../static/app_icon/img_app_10.jpg) no-repeat center;
+            }
+            .s-q-item-img-07 {
+                background: url(../static/app_icon/img_app_12.jpg) no-repeat center;
+            }
+            .s-q-item-img-08 {
+                background: url(../static/app_icon/img_app_09.jpg) no-repeat center;
+            }
+            .s-q-item-img-09 {
+                background: url(../static/app_icon/img_app_08.jpg) no-repeat center;
+            }
+        .s-q-top-a {
+            font-size: 24px;
+            color: #313131;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        .s-q-top-dd {
+            font-size: 14px;
+            color: #959595;
+        }
+    }
+}

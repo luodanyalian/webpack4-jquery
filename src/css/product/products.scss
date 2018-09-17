@@ -1,0 +1,375 @@
+@import "../common/public";
+@import "../common/subgroup";
+body{
+  background-color: #ebebeb;
+}
+.product-main {
+  min-width: 1200px;
+  max-width: 2560px;
+  width: 100%;
+  //.top-bkg{
+  //  min-width: 1200px;
+  //  max-width: 2560px;
+  //  width: 100%;
+  //  height: 420px;
+  //  position: absolute;
+  //  //颜色的渐变
+  //  background: -webkit-linear-gradient(left, #ED5564, #FF9575);
+  //  background: -o-linear-gradient(left, #ED5564, #FF9575);
+  //  background: -moz-linear-gradient(left, #ED5564, #FF9575);
+  //  background: -ms-linear-gradient(left, #ED5564, #FF9575);
+  //  background: -webkit-gradient(linear, 0% 25%, 75% 100%, from(#ED5564), to(#FF9575));
+  //
+  //}
+ /*.right-nav{
+    position: fixed;
+    top: 206px;
+    left: calc(50vw + 620px);
+    width: 64px;
+    .channel{
+      height: 240px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      .one{
+        height: 67.6px;
+        background-image: linear-gradient(-180deg, #FFFFFF 76%, #EBEBEB 100%);
+        p{
+          height: 17px;
+          line-height: 17px;
+          padding-top: 15px;
+          
+          font-size: 12px;
+          color: #959595;
+          text-align: center;
+        }
+        img{
+          margin: 0;
+          padding: 0;
+          position: relative;
+          top: 35px;
+          opacity: 0.1;
+          //z-index: -1;
+        }
+        .ii{
+          width: 8px;
+          height: 5px;
+          background-color: #646464;
+          position: relative;
+          top: 50px;
+          opacity: 0.2;
+          left: 28px;
+          border-radius: 0 0 4px 4px;
+        }
+
+      }
+      .store-icon{
+        width: 32px;
+        height: 32px;
+        margin-top: 18.2px;
+      }
+    }
+    .points{
+      display: block;
+      height: 64px;
+      margin-top: 10px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+      border-radius: 8px;text-align: center;
+      .point-icon{
+        margin-top: 8px;
+        width: 26px;
+        height: 26px;
+      }
+      .text{
+        
+        font-size: 12px;
+        color: #8B49F6;
+        text-align: center;
+        height: 17px;
+        line-height: 17px;
+        margin-top: 3px;
+      }
+    }
+    .back-top{
+      height: 64px;
+      margin-top: 10px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+      border-radius: 8px;text-align: center;
+      display: none;
+      .backTop-icon{
+        margin-top: 8px;
+        width: 26px;
+        height: 26px;
+      }
+      .text{
+        
+        font-size: 12px;
+        color: #959595;
+        height: 17px;
+        line-height: 17px;
+        margin-top: 3px;
+      }
+    }
+  }*/
+  //.floor {
+  //  width: 1200px;
+  //  margin: 0 auto;
+  //  .title{
+  //    height: 146px;
+  //    color: #FFFFFF;
+  //    @include englishChinese;
+  //    /*.english{
+  //      color: #FFFFFF;
+  //      opacity: 0.2;
+  //      font-size: 72px;
+  //      height: 87px;
+  //      line-height: 87px;
+  //      letter-spacing: -2px;
+  //      font-family: DIN-Regular;
+  //      position: relative;
+  //      top: 46px;
+  //    }
+  //    .chinese{
+  //      
+  //      font-size: 32px;
+  //      color: #FFFFFF;
+  //      position: relative;
+  //      //top: 33px;
+  //      left: 20px;
+  //    }*/
+  //  }
+  //  .floor-main{
+  //    display: flex;
+  //    .one{
+  //      flex: 480px;
+  //      height: 640px;
+  //      background: #FFFFFF;
+  //      @include productionCardShadow;
+  //      overflow: hidden;
+  //      position: relative;
+  //      .img{
+  //        width: 480px;
+  //        height: 640px;
+  //        //卡片大小渐变
+  //        @include cardGradual;
+  //      }
+  //      .one-des{
+  //        position: absolute;
+  //        left: 30px;
+  //        bottom: 30px;
+  //        width: 420px;
+  //        z-index: 2;
+  //        .type{
+  //          
+  //          font-size: 20px;
+  //          color: #313131;
+  //          margin-bottom: 10px;
+  //          @include textOverflowOne;   //单行文本超出显示省略号
+  //
+  //        }
+  //        .name{
+  //          
+  //          font-size: 32px;
+  //          color: #313131;
+  //          margin-bottom: 10px;
+  //          @include textOverflowOne;   //单行文本超出显示省略号
+  //
+  //        }
+  //        .dec{
+  //          
+  //          font-size: 20px;
+  //          color: #959595;
+  //          @include textOverflowOne;   //单行文本超出显示省略号
+  //
+  //        }
+  //      }
+  //    }
+  //    .mid{
+  //      flex: 20px;
+  //    }
+  //    .two{
+  //      flex: 700px;
+  //      .two-top{
+  //        height: 364px;
+  //        background: #FFFFFF;
+  //        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  //        border-radius: 8px;
+  //        overflow: hidden;
+  //        position: relative;
+  //        .img{
+  //          width: 700px;
+  //          height: 364px;
+  //          //卡片大小渐变
+  //          @include cardGradual;
+  //        }
+  //        .two-top-des{
+  //          position: absolute;
+  //          left: 30px;
+  //          bottom: 30px;
+  //          width: 420px;
+  //          z-index: 2;
+  //          .type{
+  //            
+  //            font-size: 20px;
+  //            color: #313131;
+  //            margin-bottom: 10px;
+  //            @include textOverflowOne;   //单行文本超出显示省略号
+  //
+  //          }
+  //          .name{
+  //            
+  //            font-size: 32px;
+  //            color: #313131;
+  //            margin-bottom: 10px;
+  //            @include textOverflowOne;   //单行文本超出显示省略号
+  //
+  //          }
+  //          .dec{
+  //            
+  //            font-size: 20px;
+  //            color: #959595;
+  //            @include textOverflowOne;   //单行文本超出显示省略号
+  //
+  //          }
+  //        }
+  //      }
+  //      .two-bom{
+  //        margin-top: 20px;
+  //        display: flex;
+  //        .three,.four{
+  //          flex: 340px;
+  //          height: 256px;
+  //          background: #FFFFFF;
+  //          box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  //          border-radius: 8px;
+  //          overflow: hidden;
+  //          position: relative;
+  //          .img{
+  //            width: 340px;
+  //            height: 256px;
+  //            //卡片大小渐变
+  //            @include cardGradual;
+  //          }
+  //          .three-des,.four-des{
+  //            position: absolute;
+  //            left: 30px;
+  //            bottom: 30px;
+  //            width: 280px;
+  //            z-index: 2;
+  //            .type{
+  //              
+  //              font-size: 16px;
+  //              color: #313131;
+  //              margin-bottom: 10px;
+  //              @include textOverflowOne;   //单行文本超出显示省略号
+  //            }
+  //            .name{
+  //              
+  //              font-size: 24px;
+  //              color: #313131;
+  //              margin-bottom: 10px;
+  //              @include textOverflowOne;   //单行文本超出显示省略号
+  //            }
+  //            .dec{
+  //              
+  //              font-size: 16px;
+  //              color: #959595;
+  //              @include textOverflowOne;   //单行文本超出显示省略号
+  //            }
+  //          }
+  //        }
+  //        .mid{
+  //          flex: 20px;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+  .floor-two{
+    width: 1200px;
+    margin: 0 auto;
+    .title{
+      height: 146px;
+      @include englishChinese;
+      .chinese{
+        color: #646464;
+      }
+      .english{
+        opacity: 0.1;
+        color: #313131;
+      }
+      .see-more{
+        display: block;
+        position: relative;
+        left: 1084px;
+        bottom: 28px;
+        width: 96px;
+        height: 32px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 16px;
+        background-color: #FFFFFF;
+        //top: -10px;
+        .more-text{
+          
+          font-size: 14px;
+          color: #8B49F6;
+          margin-left: 4px;
+        }
+        .right-more{
+          width: 20px;
+          height: 20px;
+          margin-left: -6px;
+        }
+        .more-text,.right-more{
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+    .floor-two-main{
+      display: flex;
+      height: 380px;
+      .two-item{
+        flex: 285px;
+        margin-right: 20px;
+        background-color: #ffffff;
+        overflow: hidden;
+        &:last-child{
+          margin-right: 0;
+        }
+        @include productionCardShadow;
+        @include productionCardHoverShadow;
+        position: relative;
+
+        .img{
+          width: 285px;
+          height: 285px;
+        }
+        .two-item-dec{
+          width: 245px;
+          height: 70px;
+          margin-top: 20px;
+          margin-left: 20px;
+          .dec-title{
+            
+            font-size: 20px;
+            color: #313131;
+            @include textOverflowOne;
+          }
+          .dec-main{
+            
+            font-size: 14px;
+            color: #959595;
+            margin-top: 5px;
+            @include textOverflowOne;
+          }
+        }
+      }
+    }
+  }
+}

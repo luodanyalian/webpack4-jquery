@@ -1,0 +1,19 @@
+.ptswiper {
+    height: 540px;
+    .swiper-wrapper {
+        width: 100%;
+        .swiper-slide {
+            img {
+                // max-width: 2560px;
+               	min-width: 1200px;
+                height: 540px;
+            }
+        }
+    }
+}
+
+.page-container {
+    background-color: #ebebeb;
+    position: relative;
+    padding-bottom: 40px;
+}

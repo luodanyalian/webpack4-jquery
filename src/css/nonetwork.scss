@@ -1,0 +1,25 @@
+.no-network-img {
+	 width: 100%;
+	 height: 600px;
+	 background-image:url('../static/img/img_other_404_bg.jpg');
+	 background-position: center;
+}
+.no-net-text {
+	width: 300px;
+	height: 60px;
+	padding-top: 394px;
+	padding-left: 80px;
+	font-size: 16px;
+	color: #646464;
+	.no-net-text-m {
+		margin-top: 10px;
+	}
+	.no-net-go-text {
+		color: #8B49F6;
+	}
+	.no-net-go-img {
+		width: 16px;
+	    height: 16px;
+	    vertical-align: middle;
+	}
+}

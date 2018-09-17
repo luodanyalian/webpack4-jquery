@@ -1,0 +1,87 @@
+
+  
+.c-container {
+    min-width: 1200px;
+    max-width: 2560px;
+    width: 100%;
+    min-height: 100%;
+    background-color: #FFFFFF;
+}
+
+/*头部蓝色渐变背景*/
+.c-title-bg {
+    width: 100%;
+    min-width: 1200px;
+    height: 540px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.c-title-text {
+	font-size: 24px;
+    color: #646464;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.c-line {
+    width: 28px;
+    height: 4px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #646464;
+    border-radius: 2px;
+}
+
+.c-call-number {
+    font-size: 24px;
+    color: #646464;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 32px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.c-map-adress {
+    font-size: 20px;
+    color: #646464;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 32px;
+    margin-bottom: 60px;
+}
+
+.c-sub-title-text {
+	width: 960px;
+	font-size: 18px;
+	color: #646464;
+	letter-spacing: 0;
+	line-height: 35px;
+	padding-bottom: 60px;
+    .a-sub-top-text {
+        font-size: 24px;
+    }
+}
+
+.c-map-img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+

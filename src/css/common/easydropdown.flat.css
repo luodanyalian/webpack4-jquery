@@ -1,0 +1,230 @@
+
+/* --- DEMO FLAT THEME --- */
+
+/* PREFIXED CSS */
+
+.flat,
+.flat div,
+.flat li,
+.flat div::after,
+.flat .carat,
+.flat .carat:after,
+.flat .selected::after,
+.flat:after{
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
+.flat .selected::after,
+.flat.scrollable div::after{
+	-webkit-pointer-events: none;
+	-moz-pointer-events: none;
+	-ms-pointer-events: none;
+	pointer-events: none;
+}
+
+/* WRAPPER */
+
+.flat{
+	position: relative;
+	width: 420px;
+	cursor: pointer;
+	font-weight: 200;
+	background: #fff;
+	padding: 8px 0px 8px;
+	
+	border-radius: 5px;
+	
+	color:  #000;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	margin: 0 auto;
+}
+
+.flat.open{
+	z-index: 2;
+}
+
+.flat:hover,
+.flat.focus{
+	/* background: #ffffff; */
+}
+
+/* CARAT */
+
+.flat .carat,
+.flat .carat:after{
+	position: absolute;
+	right: 14px;
+	top: 50%;
+	margin-top: -3px;
+	border: 6px solid transparent;
+	border-top: 6px solid #959595;
+	z-index: 1;
+	
+	-webkit-transform-origin: 50% 20%;
+	-moz-transform-origin: 50% 20%;
+	-ms-transform-origin: 50% 20%;
+	transform-origin: 50% 20%;
+	
+}
+
+
+.flat.open .carat{
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/* OLD SELECT (HIDDEN) */
+
+.flat .old{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+.flat select{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.flat.touch select{
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+/* SELECTED FEEDBACK ITEM */ 
+.flat .selected {
+	color: #313131;
+}
+
+.flat .selected,
+.flat li{
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 1;
+	padding: 8px 24px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.flat .selected::after{
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 60px;
+	
+	border-radius: 0 24px 24px 0;
+	/* box-shadow: inset -55px 0 25px -20px #FAE1E1; */
+}
+
+/* .flat:hover .selected::after,
+.flat.focus .selected::after{
+	box-shadow: inset -55px 0 25px -20px #ffffff;
+} */
+
+/* DROP DOWN WRAPPER */
+
+.flat div{
+	position: absolute;
+	height: 0;
+	left: 0;
+	right: 0;
+	top: 93%;
+	background: #ffffff;
+	overflow: hidden;
+	opacity: 0;
+	color: #313131;
+}
+
+.flat:hover div{
+	background: #ffffff;
+}
+
+/* Height is adjusted by JS on open */
+
+.flat.open div{
+	opacity: 1;
+	z-index: 2;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+}
+
+/* FADE OVERLAY FOR SCROLLING LISTS */
+
+.flat.scrollable div::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+	
+	box-shadow: inset 0 -50px 30px -35px #ffffff;
+}
+
+.flat.scrollable:hover div::after{
+	box-shadow: inset 0 -50px 30px -35px #ffffff;
+}
+
+.flat.scrollable.bottom div::after{
+	opacity: 0;
+}
+
+/* DROP DOWN LIST */
+
+.flat ul{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	list-style: none;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.flat.scrollable.open ul{
+	overflow-y: auto;
+}
+
+/* DROP DOWN LIST ITEMS */
+
+.flat li{
+	list-style: none;
+	padding: 14px 24px;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.flat li:last-child {
+    border-bottom: 0;
+}
+
+/* .focus class is also added on hover */
+
+.flat li.focus{
+	background: #FAE1E1;
+	position: relative;
+	z-index: 3;
+	color: #8b49f6;
+}
+
+.flat li.active{
+	background: #FAE1E1;
+	color: #8b49f6;
+}
